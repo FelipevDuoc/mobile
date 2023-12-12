@@ -1,0 +1,13 @@
+/* Estilos personalizados para la página de horario */
+ion-scroll {
+    max-height: 50px; /* Altura máxima de la lista de días */
+  }
+  
+  ion-list-header {
+    font-weight: bold;
+  }
+  
+  ion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  

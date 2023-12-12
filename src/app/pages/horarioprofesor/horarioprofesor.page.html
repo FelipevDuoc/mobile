@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profesor"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Horario del Profesor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lista de días horizontal -->
+  <ion-list>
+    <ion-list style="display: flex; justify-content: center; width: 100%;">
+      <ion-item *ngFor="let dia of diasSemana" (click)="mostrarAsignaturas(dia)">
+        {{ dia }}
+      </ion-item>
+    </ion-list>
+  </ion-list>
+
+  <!-- Lista de asignaturas -->
+  <ion-list *ngIf="asignaturasPorDia.length > 0">
+    <ion-list-header>
+      {{ diaSeleccionado }}
+    </ion-list-header>
+    <ion-item *ngFor="let asignatura of asignaturasPorDia" (click)="navegarAAsignaturaProfesor()">
+      <ion-label>
+        {{ asignatura.horaInicio }} a {{ asignatura.horaTermino }} <br>
+        {{ asignatura.nombre }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mensaje cuando no hay asignaturas -->
+  <div *ngIf="asignaturasPorDia.length === 0">
+    <p>No hay asignaturas disponibles para {{ diaSeleccionado }}.</p>
+  </div>
+</ion-content>

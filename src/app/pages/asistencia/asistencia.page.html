@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Portal de Asistencia</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-accordion-group color="dark">
+        <ng-container color="dark" *ngFor="let asignatura of asignaturasUnicas">
+            <ion-accordion style="background-color: white" [value]="asignatura" color="light">
+                <ion-item style="background-color: white" slot="header" color="light">
+                    <ion-label>{{ asignatura }}</ion-label>
+                </ion-item>
+                <ion-list slot="content">
+                    <ion-item *ngFor="let item of gruposPorAsignatura[asignatura]">
+                        <ion-label>
+                            <p>Fecha: {{ item.fecha }}</p>
+                            <!-- Agrega más campos según tus necesidades -->
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-accordion>
+        </ng-container>
+    </ion-accordion-group>
+</ion-content>

@@ -1,0 +1,49 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-detalleprofesor',
+  templateUrl: './detalleprofesor.page.html',
+  styleUrls: ['./detalleprofesor.page.scss'],
+})
+export class DetalleprofesorPage {
+  alumnos = [
+    "MATIAS SEBASTIAN ANINIR LLANCAO",
+    "ALDO MIGUEL ARROYO CASTRO",
+    "MATIAS NICOLAS BELLO RODRIGUEZ",
+    "SEBASTIAN RODRIGO BERNAL AEDO",
+    "CINDY STEPHANIE BEYER ULLOA",
+    "JUAN LUIS VICENTE BORQUEZ ORMENO",
+    "SAMUEL ALEJANDRO CONTRERAS YEVILAO",
+    "FELIPE IGNACIO SEBASTIAN ELGUETA PARRA",
+    "FRANCISCO MAXIMILIANO ESPANA LUENGO",
+    "MANUEL ALEJANDRO FIGUEROA PUENTES",
+    "FELIPE GALAN FERNANDEZ",
+    "SAMUEL GARRIDO FUENTES",
+    "MIGUEL ALONSO GATICA DIAZ",
+    "BRAYAN ABDUL GATICA GUTIERREZ",
+    "MATIAS ALEJANDRO GONZALEZ ESPINOZA",
+    "ERWIN GONZALEZ LOZANO",
+    "MATIAS ALEJANDRO HERMOSILLA VERGARA",
+    "DIEGO ALEJANDRO JIMENEZ CARVAJAL",
+    "MATIAS IGNACIO LARENAS NOVA",
+    "ANGELO ANDRES LOPEZ QUINTANA",
+    "MATIAS IGNACIO LOPEZ VIDAL",
+    "JOSE MANUEL MONTENEGRO VENEGAS",
+    "NICOLAS ALEJANDRO NAVARRO ARAVENA",
+    "ERWIN ENRIQUE NUNEZ BRACHO",
+    "CHRISTOPHER NICOLAS PINEDA AGUAYO",
+    "LUCAS ANDRES POBLETE GUZMAN",
+    "FABIAN ARTURO PONCE DE LEON MORA",
+    "LUIS SAEZ DIAZ",
+    "BENJAMIN ANDRES SEPULVEDA TOLEDO",
+    "FELIPE ANDRES VALDEBENITO CABRERA"
+  ];
+
+  esVerde(): boolean {
+    return Math.random() < 0.4; // Devuelve verdadero (verde) aproximadamente el 40% del tiempo
+  }
+
+  contieneLetraA(alumno: string): boolean {
+    return alumno.toLowerCase().includes('a');
+  }
+}

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+    <!-- Agrega un botón en la esquina superior derecha para cerrar sesión -->
+    <ion-buttons slot="end">
+      <ion-button (click)="signOut()" color="dark">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Agrega un ion-card-header para mostrar el nombre de usuario y el mensaje de bienvenida -->
+  <ion-card-header>
+    <ion-card-title>
+      ¡Bienvenido
+    </ion-card-title>
+    <div class="container text-center">
+      <!-- Imagen del profesor (ajusta el ancho y alto según tus necesidades) -->
+      <img src="assets/ibrayan.jpeg" alt="ibrayan" class="img-fluid rounded-circle profesor-img"
+        style="width: 150px; height: 150px;">
+    </div>
+  </ion-card-header>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/inicio">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/escanear">
+        <ion-icon name="barcode-outline"></ion-icon>
+        <ion-label>Escanear</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/horario">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label>Horario</ion-label>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/asistencia">
+        <ion-icon name="hand-right-outline"></ion-icon>
+        <ion-label>Asistencia</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

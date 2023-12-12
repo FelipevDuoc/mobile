@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> <!-- Utiliza el slot "start" para alinear el botón a la izquierda -->
+      <ion-back-button defaultHref="/profesor"></ion-back-button> <!-- Botón de retroceso -->
+    </ion-buttons>
+    <ion-title>
+      Lista de Alumnos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let alumno of alumnos" [ngClass]="{'texto-verde': esVerde(), 'texto-rojo': !esVerde()}">
+      {{ alumno }}
+    </ion-item>
+  </ion-list>
+</ion-content>
